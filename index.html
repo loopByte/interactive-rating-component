@@ -9,12 +9,14 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
 	<title>Frontend Mentor | Interactive rating component</title>
-
+	<link rel="stylesheet" href="./style.css">
 	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 	<style>
 		.attribution {
 			font-size: 11px;
 			text-align: center;
+			position: absolute;
+			bottom: 20px;
 		}
 
 		.attribution a {
@@ -26,34 +28,59 @@
 <body>
 
 	<!-- Rating state start -->
+	<aside class="rating-card">
+		<header class="rating-card__header">
+			<img src="/images/icon-star.svg" alt="Star icon">
+		</header>
 
-	How did we do?
+		<main class="rating-card__content">
+			<h1>How did we do?</h1>
 
-	Please let us know how we did with your support request. All feedback is appreciated
-	to help us improve our offering!
+			<p>
+				Please let us know how we did with your support request. All feedback is appreciated
+				to help us improve our offering!
+			</p>
+		</main>
 
-	1 2 3 4 5
+		<div class="rating-card__content__grades">
+			<span class="grade" data-grade="1">1</span>
+			<span class="grade" data-grade="2">2</span>
+			<span class="grade" data-grade="3">3</span>
+			<span class="grade" data-grade="4">4</span>
+			<span class="grade" data-grade="5">5</span>
+		</div>
 
-	Submit
+		<button class="btn">Submit</button>
+	</aside>
 
 	<!-- Rating state end -->
 
 	<!-- Thank you state start -->
 
-	You selected <!-- Add rating here --> out of 5
+	<aside class="rating-card thank">
+		<img src="./images/illustration-thank-you.svg" alt="">
 
-	Thank you!
+		<span class="rating">You selected <span id="grade"></span> out of 5</span>
 
-	We appreciate you taking the time to give a rating. If you ever need more support,
-	don’t hesitate to get in touch!
+		<main class="rating-card__content thank">
+			<h1>Thank you!</h1>
+
+			<p>
+				We appreciate you taking the time to give a rating. If you ever need more support,
+				don’t hesitate to get in touch!
+			</p>
+		</main>
+	</aside>
 
 	<!-- Thank you state end -->
 
 
 	<div class="attribution">
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-		Coded by <a href="#">Your Name Here</a>.
+		Coded by <a href="http://github.com/loopByte">Vasile Milea</a>.
 	</div>
+
+	<script src="./script.js"></script>
 </body>
 
 </html>
